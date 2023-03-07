@@ -10,8 +10,6 @@ with open('rewriteA.txt', 'w', encoding='utf-8') as file:
         cell_a_value = worksheet.cell(row=row, column=1).value
         cell_c_value = worksheet.cell(row=row, column=3).value
 
-        soup = BeautifulSoup(cell_a_value, 'html.parser')
-        links = soup.find_all('a')
 
         replaced_link_text = {}
         for link in links:
